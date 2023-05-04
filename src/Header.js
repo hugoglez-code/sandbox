@@ -7,7 +7,7 @@ export function Header() {
     <Flex justifyContent="center">
       <Image
         alt="logo"
-        src="logo.png"
+        src="./logo.png"
         padding={tokens.space.medium}
       />
     </Flex>
