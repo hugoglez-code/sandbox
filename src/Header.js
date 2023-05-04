@@ -7,7 +7,7 @@ export function Header() {
     <Flex justifyContent="center">
       <Image
         alt="logo"
-        src={require('./logo.png')}
+        src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
         padding={tokens.space.medium}
       />
     </Flex>
