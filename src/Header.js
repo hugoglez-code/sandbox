@@ -7,7 +7,7 @@ export function Header() {
     <Flex justifyContent="center">
       <Image
         alt="logo"
-        src="https://docs.amplify.aws/assets/logo-dark.svg"
+        src="logo.png"
         padding={tokens.space.medium}
       />
     </Flex>
