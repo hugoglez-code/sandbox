@@ -5,7 +5,8 @@ import * as queries from './graphql/queries';
 
 
 const postDetails = {
-  name: (Math.random() + 1).toString(36).substring(7),
+  id: 2,
+  name: 'hola',
   description: 'Example post'
 };
 
