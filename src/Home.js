@@ -20,7 +20,8 @@ export function Home() {
             name: "hola",
             description: 'Example post'
           } 
-        }
+        },
+        authMode: "AMAZON_COGNITO_USER_POOLS"
       })}>Create example post</button>
       <button onClick={console.log(listPosts)}>List posts</button>
     </main>
