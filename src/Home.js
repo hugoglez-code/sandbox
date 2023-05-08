@@ -15,9 +15,11 @@ export function Home() {
       <button onClick={() => API.graphql({
         query: mutations.createPost,
         variables: {
-          id: 2,
-          name: "hola",
-          description: 'Example post'
+          input: {
+            id: 2,
+            name: "hola",
+            description: 'Example post'
+          } 
         }
       })}>Create example post</button>
       <button onClick={console.log(listPosts)}>List posts</button>
