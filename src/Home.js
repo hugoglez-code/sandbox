@@ -1,12 +1,12 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { API } from "aws-amplify";
-import * as mutations from './graphql/mutations'
-import * as queries from './graphql/queries'
+import * as mutations from './graphql/mutations';
+import * as queries from './graphql/queries';
 
 const postDetails = {
   name: (Math.random() + 1).toString(36).substring(7),
   description: 'Example post'
-}
+};
 
 const createPost = await API.graphql({
   query: mutations.createPost,
