@@ -8,12 +8,12 @@ const postDetails = {
   description: 'Example post'
 };
 
-const createPost = await API.graphql({
+const createPost = API.graphql({
   query: mutations.createPost,
   variables: { input: postDetails }
 });
 
-const listPosts = await API.graphql({ query: queries.listPosts});
+const listPosts = API.graphql({ query: queries.listPosts});
 
 export function Home() {
   const { signOut, user } = useAuthenticator();
