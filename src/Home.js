@@ -5,6 +5,7 @@ import * as queries from './graphql/queries';
 import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 
+
 const postDetails = {
   name: (Math.random() + 1).toString(36).substring(7),
   description: 'Example post'
