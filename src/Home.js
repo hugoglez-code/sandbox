@@ -16,7 +16,7 @@ const createPost = API.graphql({
   variables: { input: postDetails }
 });
 
-const listPosts = API.graphql({ query: queries.listPosts});
+const listPosts = API.graphql({ query: queries.listPosts });
 
 export function Home() {
   const { signOut, user } = useAuthenticator();
