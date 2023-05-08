@@ -2,8 +2,6 @@ import { useAuthenticator } from "@aws-amplify/ui-react";
 import { API } from "aws-amplify";
 import * as mutations from './graphql/mutations';
 import * as queries from './graphql/queries';
-import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
 
 
 const postDetails = {
