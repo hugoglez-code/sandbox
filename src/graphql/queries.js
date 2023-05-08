@@ -9,12 +9,13 @@ export const getPost = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const listPosts = /* GraphQL */ `
   query ListPosts(
-    $filter: ModelTodoFilterInput
+    $filter: ModelPostFilterInput
     $limit: Int
     $nextToken: String
   ) {
@@ -25,6 +26,7 @@ export const listPosts = /* GraphQL */ `
         description
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
