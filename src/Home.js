@@ -8,7 +8,7 @@ export function Home() {
 
   return (
     <main>
-      <h1>Hello {user.username}</h1>
+      <h1>Hello {user.attributes.email}</h1>
       <button onClick={signOut}>Sign out</button>
       <button onClick={() => API.graphql({
         query: mutations.createPost,
@@ -21,7 +21,15 @@ export function Home() {
         },
         authMode: "AMAZON_COGNITO_USER_POOLS"
       })}>Create example post</button>
-      <button onClick={() => {console.log(API.graphql({ query: queries.listPosts}))}}>List posts</button>
+      <button onClick={() => {console.log(API.graphql({ query: queries.listPosts }))}}>List posts</button>
+      <iframe
+        width="1280"
+        height="720"
+        src={"https://www.youtube.com/embed/O8G9ytZg-bM"}
+        title="Youtube Player"
+        frameborder="0"
+        allowFullScreen
+      />
     </main>
   );
 }

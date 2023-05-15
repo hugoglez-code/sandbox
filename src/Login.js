@@ -33,16 +33,7 @@ export function Login() {
         <Authenticator components={components}>
           {({ signOut, user }) => (
             <main>
-              <h1>Hello {user.attributes.email}</h1>
-              <button onClick={signOut}>Sign out</button>
-              <iframe
-                width="1280"
-                height="720"
-                src={"https://www.youtube.com/embed/O8G9ytZg-bM"}
-                title="Youtube Player"
-                frameborder="0"
-                allowFullScreen
-              />
+              return <Home />
             </main>
           )}
         </Authenticator>
