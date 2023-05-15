@@ -25,6 +25,10 @@
           "GROUP": "",
           "deploymentBucketName": "amplify-amplifyd6b9c2b3747f4-staging-190541-deployment",
           "s3Key": "amplify-builds/sandboxPostConfirmation-4336714551312b46596e-build.zip"
+        },
+        "LambdaTest": {
+          "deploymentBucketName": "amplify-amplifyd6b9c2b3747f4-staging-190541-deployment",
+          "s3Key": "amplify-builds/LambdaTest-56564745664b4f716f49-build.zip"
         }
       }
     }
