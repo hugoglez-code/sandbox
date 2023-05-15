@@ -34,7 +34,7 @@ export function Login() {
         <Authenticator components={components}>
           {({ signOut, user }) => (
             <main>
-              return <Home />
+              <Home />
             </main>
           )}
         </Authenticator>
