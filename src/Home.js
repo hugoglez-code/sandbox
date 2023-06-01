@@ -6,6 +6,12 @@ import * as queries from './graphql/queries';
 
 export function Home() {
   const { signOut, user } = useAuthenticator();
+  const myInit = {
+    body: {
+      "user": "hugoglez"
+    },
+    headers: {}
+  }
 
   return (
     <main>
@@ -24,6 +30,7 @@ export function Home() {
         authMode: "AMAZON_COGNITO_USER_POOLS"
       })}>Create example post</button>
       <button onClick={() => {console.log(API.graphql({ query: queries.listPosts }))}}>List posts</button>
+      <button onClick={() => {console.log(API.post("test-php-api", "/php-lambda", myInit))}}>PHP Lambda</button>
       <iframe
         width="1280"
         height="720"
