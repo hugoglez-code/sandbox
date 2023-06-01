@@ -1,15 +1,24 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { API } from "aws-amplify";
+import axios from "axios";
 import * as mutations from './graphql/mutations';
 import * as queries from './graphql/queries';
 
 export function Home() {
   const { signOut, user } = useAuthenticator();
+  const APIUrl = "https://aqsneed4l3.execute-api.us-east-1.amazonaws.com/prod/php-lambda";
   const myInit = {
     body: {
       "user": "hugoglez"
     },
     headers: {}
+  }
+  function PhpLambda() {
+    axios.post(APIUrl, {
+      body: {
+        "user": "hugoglez"
+      },
+    })
   }
 
   return (
@@ -28,7 +37,7 @@ export function Home() {
         authMode: "AMAZON_COGNITO_USER_POOLS"
       })}>Create example post</button>
       <button onClick={() => {console.log(API.graphql({ query: queries.listPosts }))}}>List posts</button>
-      <button onClick={() => {console.log(API.post("test-php-api", "/php-lambda", myInit))}}>PHP Lambda</button>
+      <button onClick={console.log(PhpLambda)}>PHP Lambda</button>
       <iframe
         width="1280"
         height="720"
