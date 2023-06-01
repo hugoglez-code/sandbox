@@ -8,7 +8,7 @@ export function Home() {
   const { signOut, user } = useAuthenticator();
   const APIUrl = "https://aqsneed4l3.execute-api.us-east-1.amazonaws.com/prod/php-lambda";
   const body = {
-    user: hugoglez
+    "user": "hugoglez"
   };
   function PhpLambda() {
     axios.post(APIUrl, {body}).then(res => {
