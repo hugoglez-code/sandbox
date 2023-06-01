@@ -7,7 +7,3 @@ type Post @model @auth(rules: [{ allow: private }]) {
   name: String!
   description: String
 }
-
-type Query {
-  echo(msg: String): String @function(name: "LambdaTest-${env}")
-}

@@ -1,6 +1,5 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { API } from "aws-amplify";
-import Lambda from 'aws-sdk/clients/lambda';
 import * as mutations from './graphql/mutations';
 import * as queries from './graphql/queries';
 
@@ -17,7 +16,6 @@ export function Home() {
     <main>
       <h1>Hello {user.attributes.email}</h1>
       <button onClick={signOut}>Sign out</button>
-      <button onClick={() => {console.log(API.graphql({ query: query.echo("Hola mundo") }))}}>Test lambda</button>
       <button onClick={() => API.graphql({
         query: mutations.createPost,
         variables: {

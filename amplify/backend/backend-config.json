@@ -92,22 +92,6 @@
     }
   },
   "function": {
-    "LambdaTest": {
-      "build": true,
-      "dependsOn": [
-        {
-          "attributes": [
-            "GraphQLAPIIdOutput",
-            "GraphQLAPIEndpointOutput",
-            "GraphQLAPIKeyOutput"
-          ],
-          "category": "api",
-          "resourceName": "sandbox"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
     "sandboxPostConfirmation": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -115,22 +99,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_LambdaTest_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "LambdaTest"
-        }
-      ]
-    },
-    "AMPLIFY_function_LambdaTest_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "LambdaTest"
-        }
-      ]
-    },
     "AMPLIFY_function_sandboxPostConfirmation_GROUP": {
       "usedBy": [
         {
