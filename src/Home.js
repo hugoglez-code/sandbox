@@ -7,17 +7,13 @@ import * as queries from './graphql/queries';
 export function Home() {
   const { signOut, user } = useAuthenticator();
   const APIUrl = "https://aqsneed4l3.execute-api.us-east-1.amazonaws.com/prod/php-lambda";
-  const myInit = {
-    body: {
-      "user": "hugoglez"
-    },
-    headers: {}
-  }
+  const body = {
+    user: hugoglez
+  };
   function PhpLambda() {
-    axios.post(APIUrl, {
-      body: {
-        "user": "hugoglez"
-      },
+    axios.post(APIUrl, {body}).then(res => {
+      console.log(res);
+      console.log(res.data);
     })
   }
 
@@ -37,7 +33,7 @@ export function Home() {
         authMode: "AMAZON_COGNITO_USER_POOLS"
       })}>Create example post</button>
       <button onClick={() => {console.log(API.graphql({ query: queries.listPosts }))}}>List posts</button>
-      <button onClick={console.log(PhpLambda)}>PHP Lambda</button>
+      <button onClick={PhpLambda}>PHP Lambda</button>
       <iframe
         width="1280"
         height="720"
