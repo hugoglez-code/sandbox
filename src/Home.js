@@ -10,8 +10,13 @@ export function Home() {
   const body = {
     "user": "hugoglez"
   };
-  function PhpLambda() {
-    axios.post(APIUrl, {body}).then(res => {
+  const headers = {
+    'Access-Control-Allow-Origin': 'https://www.hugoglez.people.aws.dev'
+  }
+  function PhpLambda() { // TODO: Arreglar CORS.
+    axios.post(APIUrl, body, {
+      headers: headers 
+      }).then(res => {
       console.log(res);
       console.log(res.data);
     })
