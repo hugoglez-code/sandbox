@@ -10,7 +10,7 @@ export function Home() {
   const body = {
     "user": "hugoglez"
   };
-  function PhpLambda() { // TODO: Arreglar CORS.
+  function PhpLambda() {
     axios.post(APIUrl, body).then(res => {
       console.log(res);
       console.log(res.data);
